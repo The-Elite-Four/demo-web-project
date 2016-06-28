@@ -139,4 +139,11 @@ public class WebController {
 		return modelAndView;
 	}
 
+	@RequestMapping(value = "/cs480/Jose", method = RequestMethod.GET)
+	String control() {
+		// You can replace this with other string,
+		// and run the application locally to check your changes
+		// with the URL: http://localhost:8080/
+		return "Kept you waiting, huh?";
+	}
 }
