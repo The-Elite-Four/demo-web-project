@@ -51,7 +51,14 @@ public class WebController {
 		// with the URL: http://localhost:8080/
 		return "OK";
 	}
-
+    
+	@RequestMapping(value = "/cs480/Nawaf", method = RequestMethod.GET)
+	String control() {
+		// You can replace this with other string,
+		// and run the application locally to check your changes
+		// with the URL: http://localhost:8080/
+		return "It is working";
+	}
 	/**
 	 * This is a simple example of how to use a data manager
 	 * to retrieve the data and return it as an HTTP response.
