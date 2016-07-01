@@ -22,6 +22,8 @@ import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.User;
 import edu.csupomona.cs480.data.provider.UserManager;
 
+import org.apache.commons.lang.StringUtils;
+
 
 /**
  * This is the controller used by Spring framework.
@@ -153,6 +155,12 @@ public class WebController {
 		ModelAndView modelAndView = new ModelAndView("home");
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
+	}
+
+	@RequestMapping(value = "/cs480/commonsLangTest", method = RequestMethod.GET)
+	String dave() {
+		String temp = "Java Programm!";
+		return StringUtils.chop(temp);
 	}
 
 	@RequestMapping(value = "/cs480/Jose", method = RequestMethod.GET)
