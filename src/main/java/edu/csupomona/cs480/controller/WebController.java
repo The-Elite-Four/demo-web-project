@@ -1,6 +1,9 @@
 package edu.csupomona.cs480.controller;
 
 import java.util.List;
+import java.util.ArrayList;
+
+import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -153,7 +156,7 @@ public class WebController {
 	}
 
 	@RequestMapping(value = "/cs480/Jose", method = RequestMethod.GET)
-	String control() {
+	String testStringJose() {
 		// You can replace this with other string,
 		// and run the application locally to check your changes
 		// with the URL: http://localhost:8080/
@@ -166,17 +169,18 @@ public class WebController {
 	* @author Kevsbud
 	*/
 	@RequestMapping(value = "/cs480/jsoupHyperLinks", method = RequestMethod.GET)
-	List<String> parseHyperlinks(String url){
+	ArrayList<String> parseHyperlinks(String url){
 		Document doc;
+		ArrayList<String> storedLinks = new ArrayList<String>();
 		try{
 			doc = Jsoup.connect(url).get();
 			Elements links = doc.select("a[href]");
-			List<String> storedLinks = new List<String>();
 			for(Element link : links) {
 				storedLinks.add(link.attr("href"));
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return storedLinks;
 	}
 }
