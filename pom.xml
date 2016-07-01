@@ -67,12 +67,12 @@
 		    <artifactId>jsoup</artifactId>
 		    <version>1.9.2</version>
 		</dependency>        
-        <project>
-		<modelVersion>4.0.0</modelVersion>
-		<groupId>commons-lang</groupId>
-		<artifactId>commons-lang</artifactId>
-		<version>20030203.000129</version>
-	</project>
+       
+<dependency>
+    <groupId>com.cedarsoft.commons</groupId>
+    <artifactId>lang</artifactId>
+    <version>7.2.0</version>
+</dependency>
 	
 	</dependencies>
 
