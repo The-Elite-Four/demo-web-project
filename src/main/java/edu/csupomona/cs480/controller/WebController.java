@@ -59,6 +59,14 @@ public class WebController {
 		// with the URL: http://localhost:8080/
 		return "It is working";
 	}
+	
+	//Dennis' method
+	@RequestMapping(value = "/cs480/math", method = RequestMethod.GET)
+	String math(){
+		double x = Math.random();
+		return "This method returns a random double: " + x;
+	}
+	
 	/**
 	 * This is a simple example of how to use a data manager
 	 * to retrieve the data and return it as an HTTP response.
